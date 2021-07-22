@@ -4,6 +4,13 @@ body{
     font-family: 'Mulish';
 }
 
+.navbar{
+    .active{
+        font-weight: bold;
+    }
+}
+
+
 header{
     h1{
         font-size: 48px;
@@ -22,5 +29,71 @@ header{
             background-color: #195dbd;
 
         }
+    }
+}
+
+.services{
+    h5{
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    span{
+        width: 56px;
+        height: 2px;
+        background-color: black;
+        display: block;
+    }
+
+    p{
+        color: #7D7987;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .card{
+        border-radius: 20px;
+        box-shadow: 0px 20px 35px rgba(182, 182, 182, 0.1);
+        height: 340px;
+        .card-title{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card-text{
+            font-size: 16px;
+            color: #7D7987;
+            font-weight: 400;
+        }
+    }
+
+    .btn-learn-more:hover{
+        background-color: #195dbd!important;
+    }
+}
+
+.providers{
+    h6{
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    span{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: block;
+        width: 56px;
+        height: 2px;
+        background-color: black;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        color: #7D7987;
+    }
+
+    .btn-learn-more:hover{
+        background-color: #195dbd!important;
     }
 }
