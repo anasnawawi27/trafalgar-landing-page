@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+    font-family: 'Mulish';
+}
+
+header{
+    h1{
+        font-size: 48px;
+        font-weight: bold;
+    }
+    p{
+        font-size: 21px;
+        font-weight: 300;
+        color: #7D7987;
+    }
+    .btn-consult{
+        background-color: #458FF6;
+        color: #fff;
+        &:hover{
+            color:#fff;
+            background-color: #195dbd;
+
+        }
+    }
+}
