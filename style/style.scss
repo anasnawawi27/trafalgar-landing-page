@@ -1,4 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap');
+@mixin section{
+    position: relative;
+
+    h6{
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    span{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: block;
+        width: 56px;
+        height: 2px;
+        background-color: black;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        color: #7D7987;
+    }
+
+    .btn-learn-more:hover{
+        background-color: #195dbd!important;
+    }
+}
 
 body{
     font-family: 'Mulish';
@@ -65,6 +92,49 @@ header{
             color: #7D7987;
             font-weight: 400;
         }
+
+    }
+
+    .reveal{
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 1s ease;
+        
+        &:nth-child(2){
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 0.4s;
+        }
+        &:nth-child(3){
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 0.7s;
+        }
+        &:nth-child(4){
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 1.3s;
+        }
+        &:nth-child(5){
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 1.6s;
+        }
+        &:nth-child(6){
+            transform: translateY(150px);
+            opacity: 0;
+            transition: all 1s ease;
+            transition-delay: 1.9s;
+        }
+    }
+    
+    .reveal.active{
+        transform: translateY(0px);
+        opacity: 1;
     }
 
     .btn-learn-more:hover{
@@ -73,6 +143,142 @@ header{
 }
 
 .providers{
+    @include section();
+    &:before{
+        content: url('../images/provider/element.svg');
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: -100px;
+    }
+
+    .reveal{
+        position: relative;
+        transform: translateX(60px);
+        opacity: 0;
+        transition: all 1s ease;
+
+        &:nth-child(1){
+            transform: translateX(-60px);
+        }
+    }
+
+    .reveal.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.mobile-apps{
+    @include section();
+
+    .reveal{
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 1s ease;
+
+        &:nth-child(1){
+            transition-delay: 0.4s;
+        }
+    }
+
+    .reveal.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.testimoni{
+    .testimoni-container{
+        &:before{
+            content: url('../images/testimonials/element1.svg');
+            position: absolute;
+            right: 0;
+        }
+
+        position: relative;
+        padding: 15px 50px 15px 50px;
+        background: linear-gradient(45deg,#5A98F2,#67C3F3,);
+        border-radius: 20px;
+        .name{
+            font-size: 22px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .work{
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .quote{
+            font-size: 19px;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .title{
+            span{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                display: block;
+                width: 56px;
+                height: 2px;
+                background: #fff;
+            }
+        }
+
+        .owl-nav{
+            position: absolute;
+            right: 40%;
+
+            svg{
+                color: #5B9BF3;
+            }
+
+            button{
+                margin-top: 56px;
+
+                i{
+                    color: #5B9BF3;
+                }
+                &:nth-child(1){
+                    margin-right: 100px;
+                }
+
+                &:nth-child(2){
+                    margin-left: 100px;
+                }
+            }
+        }
+        .owl-dots{
+            z-index: 100;
+            margin: auto;
+            width: 150px;
+            position: absolute;
+            margin-top: 70px;
+            right: 44%;
+
+            .owl-dot{
+                span{
+                    background-color: #5B9BF3;
+                    opacity: 0.3;
+                }
+            }
+
+            .owl-dot.active{
+                span{
+                    background-color: #5B9BF3;
+                    opacity: 0.3;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.article{
     h6{
         font-size: 36px;
         font-weight: bold;
@@ -87,13 +293,78 @@ header{
         background-color: black;
     }
 
-    p{
-        font-size: 18px;
-        font-weight: 400;
-        color: #7D7987;
+    .card{
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px rgba(158, 158, 158, 0.1);
+        .card-title{
+            font-size: 21px;
+            font-weight: bold;
+        }
+        .card-text{
+            font-size: 16px;
+            color: #7D7987;
+            font-weight: 300;
+        }
+        a{
+            color: #4089ED;
+            font-weight: 600;
+        }
+    
     }
 
     .btn-learn-more:hover{
         background-color: #195dbd!important;
+    }
+
+    .reveal{
+        position: relative;
+        transform: translateX(150px);
+        opacity: 0;
+        transition: all 1s ease;
+
+        &:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        &:nth-child(3){
+            transition-delay: 0.7s;
+        }
+    }
+
+    .reveal.active{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.footer{
+    margin-top: 100px;
+    width: 100%;
+    background: linear-gradient(45deg,#5A98F2,#67C3F3,);
+    position: relative;
+    &:after{
+        content: url('../images/footer/element.svg');
+        position: absolute;
+        bottom: 0;
+
+    }
+    p{
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+    }
+    h6{
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    ul{
+        li{
+            a{
+                color: #fff;
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
     }
 }
